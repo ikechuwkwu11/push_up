@@ -1,29 +1,43 @@
-Pushups Logger Web App
+# 💪 Pushups Logger Web App
+Pushups Logger is a lightweight, personal fitness tracker built with Flask. It allows users to securely log, update, and delete their pushup workouts. The app includes user authentication, route protection, and pagination to manage and view workout history efficiently.
 
-A simple fitness tracker built with Flask, allowing users to log, update, and delete their pushup workouts. Designed with user authentication and pagination for personal workout logs.
+## 🔑 Features
+- User Authentication (via Flask-Login)
+- Log Pushup Workouts with optional comments
+- Edit and 🗑️ Delete existing workouts
+- Paginated List of personal workout logs
+- Protected Routes — accessible only when logged in
 
-Features
-- User authentication with Flask-Login
-- Log pushup workouts with optional comments
-- Edit or delete existing workouts
-- Paginated list of personal workouts
-- Route protection for logged-in users only
+## 🛠 Tech Stack
+- Component	Technology
+- Language	Python 3.7+
+- Framework	Flask
+- Auth System	Flask-Login
+- ORM	SQLAlchemy
+- Forms	WTForms (optional)
+- Database	SQLite (default)
+- Templating	Jinja2
 
-Tech Stack
-- Python 3.7+
-- Flask
-- Flask-Login
-- SQLAlchemy
-- WTForms (if used in form handling)
-- SQLite (default, can be replaced with any other DB)
+## 🔐 Authentication Details
+The following routes are login-protected:
+- /profile – View user profile and dashboard
+- /new – Log a new workout
+- /all – View all personal workouts
+- /edit/<id> and /delete/<id> – Modify or remove a workout
 
-Authentication
-The /profile, /new, /all, and workout update/delete routes are protected. Users must be logged in to access these routes.
+Users must be authenticated to access these endpoints.
 
-Usage
-- Navigate to / — the homepage
-- Register/login (depending on your setup)
-- Go to /profile to access your account
-- Use /new to log a workout
-- View all your workouts at /all
-- Update or delete workouts from the list
+## 🚀 Usage
+- Use the App
+- Visit / – Homepage
+- Register or log in
+- Go to /profile – Access your dashboard
+- Log a new workout at /new
+- View workout history at /all
+- Edit or delete workouts as needed
+
+## ✅ To-Do / Future Enhancements
+- Add password hashing (if not implemented yet)
+- Graph or stats view of progress over time
+- Mobile-friendly UI using Bootstrap
+- Workout categories or tags
